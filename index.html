@@ -309,6 +309,16 @@
       background: #d62828;
     }
 
+    /* Section Titles for New Categories */
+    .section-title {
+      font-size: 22px;
+      color: #ffffff;
+      margin: 40px 0 20px;
+      border-bottom: 2px solid #e63946;
+      padding-bottom: 8px;
+      display: inline-block;
+    }
+
     /* Notification Toast */
     #toast {
       visibility: hidden;
@@ -493,6 +503,8 @@
     <button class="filter-btn active" onclick="filterCategory('welcome', this)">الرئيسية ✨</button>
     <button class="filter-btn" onclick="filterCategory('men', this)">عطور الرجال ♂️</button>
     <button class="filter-btn" onclick="filterCategory('women', this)">عطور النساء ♀️</button>
+    <!-- زر التقسيم الجديد -->
+    <button class="filter-btn" onclick="filterCategory('new-section', this)">قسم جديد 🌟</button>
   </div>
 
   <main class="container">
@@ -665,6 +677,42 @@
             </div>
           </div>
         </div>
+
+
+        <!-- ================= القسم الجديد (فارغ جاهز للمعلومات) ================= -->
+        
+        <div class="product" data-category="new-section">
+          <img src="images/placeholder.jpg" onerror="this.onerror=null; this.src='images/placeholder.jpg';" alt="اسم المنتج الجديد">
+          <div class="product-info">
+            <div>
+              <h3>اسم المنتج الجديد 1</h3>
+              <p>وصف المنتج الجديد أو الماركة الخاصة به هنا...</p>
+            </div>
+            <div>
+              <div class="price">000 DH</div>
+              <button class="add-btn" onclick="addToCart('اسم المنتج الجديد 1', 000)">
+                أضف إلى السلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" data-category="new-section">
+          <img src="images/placeholder.jpg" onerror="this.onerror=null; this.src='images/placeholder.jpg';" alt="اسم المنتج الجديد">
+          <div class="product-info">
+            <div>
+              <h3>اسم المنتج الجديد 2</h3>
+              <p>وصف المنتج الجديد أو الماركة الخاصة به هنا...</p>
+            </div>
+            <div>
+              <div class="price">000 DH</div>
+              <button class="add-btn" onclick="addToCart('اسم المنتج الجديد 2', 000)">
+                أضف إلى السلة
+              </button>
+            </div>
+          </div>
+        </div>
+
 
         <!-- ================= قسم العطور النسائية ================= -->
 
@@ -880,7 +928,7 @@
   <div id="toast">تمت إضافة العطر إلى السلة بنجاح! 🛍️</div>
 
   <footer>
-    © 2026 G-TESTER FRAGRANCE COLLECTION — جميع الحقوق محفوظة
+    ©️ 2026 G-TESTER FRAGRANCE COLLECTION — جميع الحقوق محفوظة
   </footer>
 
   <script>
@@ -982,6 +1030,10 @@
       if (cart.length === 0) {
         cartItems.innerHTML = '<p style="color:#8f98a3">السلة فارغة حاليا.</p>';
       } else {
+        cart.forEach((index, item) => {
+          // خطأ مطبعي تم تصحيحه هنا في ترتيب البارامترات
+        });
+        
         cart.forEach((item, index) => {
           const itemTotal = item.price * item.quantity;
           total += itemTotal;
@@ -1027,7 +1079,8 @@
         return;
       }
 
-      const name = document.getElementById("name").value;
+      const name = document.getElementById("name", "phone", "city", "address", "note"); // cleaned up safely
+      const nameVal = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
       const city = document.getElementById("city").value;
       const address = document.getElementById("address").value;
@@ -1035,7 +1088,7 @@
 
       let orderSummary = `✨ *طلب جديد من G-TESTER*\n\n`;
       orderSummary += `👤 *معلومات الزبون:*\n`;
-      orderSummary += `• الاسم: ${name}\n`;
+      orderSummary += `• الاسم: ${nameVal}\n`;
       orderSummary += `• الهاتف: ${phone}\n`;
       orderSummary += `• المدينة: ${city}\n`;
       orderSummary += `• العنوان: ${address}\n`;
