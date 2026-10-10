@@ -309,16 +309,6 @@
       background: #d62828;
     }
 
-    /* Section Titles for New Categories */
-    .section-title {
-      font-size: 22px;
-      color: #ffffff;
-      margin: 40px 0 20px;
-      border-bottom: 2px solid #e63946;
-      padding-bottom: 8px;
-      display: inline-block;
-    }
-
     /* Notification Toast */
     #toast {
       visibility: hidden;
@@ -502,9 +492,8 @@
   <div class="category-nav">
     <button class="filter-btn active" onclick="filterCategory('welcome', this)">الرئيسية ✨</button>
     <button class="filter-btn" onclick="filterCategory('men', this)">عطور الرجال ♂️</button>
+    <button class="filter-btn" onclick="filterCategory('decants', this)">التقسيمات 🌟</button>
     <button class="filter-btn" onclick="filterCategory('women', this)">عطور النساء ♀️</button>
-    <!-- زر التقسيم الجديد -->
-    <button class="filter-btn" onclick="filterCategory('new-section', this)">قسم جديد 🌟</button>
   </div>
 
   <main class="container">
@@ -679,34 +668,98 @@
         </div>
 
 
-        <!-- ================= القسم الجديد (فارغ جاهز للمعلومات) ================= -->
+        <!-- ================= قسم التقسيمات (تمت تعبئته بالصور الجديدة) ================= -->
         
-        <div class="product" data-category="new-section">
-          <img src="images/placeholder.jpg" onerror="this.onerror=null; this.src='images/placeholder.jpg';" alt="اسم المنتج الجديد">
+        <div class="product" data-category="decants">
+          <img src="images/valentino.jpeg" onerror="this.onerror=null; this.src='images/valentino.jpg';" alt="Valentino Born in Roma Coral Fantasy">
           <div class="product-info">
             <div>
-              <h3>اسم المنتج الجديد 1</h3>
-              <p>وصف المنتج الجديد أو الماركة الخاصة به هنا...</p>
+              <h3>Valentino - Coral Fantasy</h3>
+              <p>نفحات التفاح الأحمر والتوابل والتبغ المنعش.</p>
             </div>
             <div>
-              <div class="price">000 DH</div>
-              <button class="add-btn" onclick="addToCart('اسم المنتج الجديد 1', 000)">
+              <div class="price">150 DH</div>
+              <button class="add-btn" onclick="addToCart('Valentino - Coral Fantasy (Decant)', 150)">
                 أضف إلى السلة
               </button>
             </div>
           </div>
         </div>
 
-        <div class="product" data-category="new-section">
-          <img src="images/placeholder.jpg" onerror="this.onerror=null; this.src='images/placeholder.jpg';" alt="اسم المنتج الجديد">
+        <div class="product" data-category="decants">
+          <img src="images/armani_intensely.jpeg" onerror="this.onerror=null; this.src='images/armani_intensely.jpg';" alt="Stronger With You Intensely">
           <div class="product-info">
             <div>
-              <h3>اسم المنتج الجديد 2</h3>
-              <p>وصف المنتج الجديد أو الماركة الخاصة به هنا...</p>
+              <h3>Stronger With You Intensely</h3>
+              <p>مزيج دافئ من الفانيليا، العنبر، والتوابل الفاخرة.</p>
             </div>
             <div>
-              <div class="price">000 DH</div>
-              <button class="add-btn" onclick="addToCart('اسم المنتج الجديد 2', 000)">
+              <div class="price">160 DH</div>
+              <button class="add-btn" onclick="addToCart('Stronger With You Intensely (Decant)', 160)">
+                أضف إلى السلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" data-category="decants">
+          <img src="images/le_male_elixir.jpeg" onerror="this.onerror=null; this.src='images/le_male_elixir.jpg';" alt="Le Male Elixir">
+          <div class="product-info">
+            <div>
+              <h3>Le Male Elixir</h3>
+              <p>Jean Paul Gaultier - العسل، الفانيليا والعنبر الجريء.</p>
+            </div>
+            <div>
+              <div class="price">180 DH</div>
+              <button class="add-btn" onclick="addToCart('Le Male Elixir (Decant)', 180)">
+                أضف إلى السلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" data-category="decants">
+          <img src="images/dior_homme_intense.jpeg" onerror="this.onerror=null; this.src='images/dior_homme_intense.jpg';" alt="Dior Homme Intense">
+          <div class="product-info">
+            <div>
+              <h3>Dior Homme Intense</h3>
+              <p>أناقة الأخشاب الفاخرة مع نفحات السوسن الساحرة.</p>
+            </div>
+            <div>
+              <div class="price">190 DH</div>
+              <button class="add-btn" onclick="addToCart('Dior Homme Intense (Decant)', 190)">
+                أضف إلى السلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" data-category="decants">
+          <img src="images/armani_absolutely.jpeg" onerror="this.onerror=null; this.src='images/armani_absolutely.jpg';" alt="Stronger With You Absolutely">
+          <div class="product-info">
+            <div>
+              <h3>Stronger With You Absolutely</h3>
+              <p>Rum, Cedarwood & Vanilla - عبير جريء ودافئ لا يُقاوم.</p>
+            </div>
+            <div>
+              <div class="price">170 DH</div>
+              <button class="add-btn" onclick="addToCart('Stronger With You Absolutely (Decant)', 170)">
+                أضف إلى السلة
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product" data-category="decants">
+          <img src="images/armani_powerfully.jpeg" onerror="this.onerror=null; this.src='images/armani_powerfully.jpg';" alt="Stronger With You Powerfully">
+          <div class="product-info">
+            <div>
+              <h3>Stronger With You Powerfully</h3>
+              <p>نفحات جلدية وعميقة تعكس القوة والأناقة الفائقة.</p>
+            </div>
+            <div>
+              <div class="price">175 DH</div>
+              <button class="add-btn" onclick="addToCart('Stronger With You Powerfully (Decant)', 175)">
                 أضف إلى السلة
               </button>
             </div>
@@ -968,7 +1021,8 @@
       const buttons = document.querySelectorAll('.filter-btn');
       let targetBtn;
       if(category === 'men') targetBtn = buttons[1];
-      if(category === 'women') targetBtn = buttons[2];
+      if(category === 'decants') targetBtn = buttons[2];
+      if(category === 'women') targetBtn = buttons[3];
       
       filterCategory(category, targetBtn);
     }
@@ -1030,10 +1084,6 @@
       if (cart.length === 0) {
         cartItems.innerHTML = '<p style="color:#8f98a3">السلة فارغة حاليا.</p>';
       } else {
-        cart.forEach((index, item) => {
-          // خطأ مطبعي تم تصحيحه هنا في ترتيب البارامترات
-        });
-        
         cart.forEach((item, index) => {
           const itemTotal = item.price * item.quantity;
           total += itemTotal;
@@ -1079,7 +1129,6 @@
         return;
       }
 
-      const name = document.getElementById("name", "phone", "city", "address", "note"); // cleaned up safely
       const nameVal = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
       const city = document.getElementById("city").value;
@@ -1110,6 +1159,7 @@
 
       cart = [];
       saveAndUpdateCart();
+      document.getElementById("orderForm->reset()")();
       document.getElementById("orderForm").reset();
     });
   </script>
